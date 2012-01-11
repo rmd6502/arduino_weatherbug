@@ -206,13 +206,13 @@ void display_temp(double new_temp) {
     } else if (LED_number > displength) {
       dispcolor = 0;
     }
+    
+//The 1'L' forces the 1 to start as a 32 bit number, otherwise it defaults to 16-bit.    
     long mask = 1L << 23L;
     for( ; mask != 0 ; mask >>= 1L) {
       //Feed color bit 23 first (red data MSB)
       
       digitalWrite(CKI, LOW); //Only change data when clock is low
-      
-      //The 1'L' forces the 1 to start as a 32 bit number, otherwise it defaults to 16-bit.
       
       if(dispcolor & mask) 
         digitalWrite(SDI, HIGH);
