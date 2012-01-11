@@ -4,6 +4,7 @@ This is a simple demonstration of using [Mashery](http://developer.mashery.com)'
 
 # Usage
 You'll need to create a file Credentials.h with the appropriate definitions:
+
 * passphrase
 
   The passphrase with which to associate to your wireless lan, if needed.
